@@ -42,10 +42,11 @@
   backdrop-filter: blur(200px);
 }
 
-.header {
-  &__nav {
-    padding-top: 1.0625rem;
-  }
+.wrapper {
+  padding-top: 4rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
 }
 
 .hero {
@@ -56,9 +57,50 @@
     text-align: justify;
     color: $white-color-5;
     font-weight: 700;
+.main,
+.sidebar {
+  // border: 3px solid black;
+  padding: 15px;
+  // background-color: #ffff;
+}
+
+.sidebar {
+  // height: 100dvh;
+  align-items: start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 40%;
+}
+
+.main {
+  width: 60%;
+}
+
+.header {
+  &__link {
+    margin-top: 1.0625rem;
+    transition: transform 250ms;
+
+    &:hover {
+      transform: translatex(10px);
+    }
   }
   z-index: 3;
 }
+
+// .hero {
+//   display: flex;
+//   justify-content: space-between;
+//   // padding: 0 10rem;
+//   &__subtitle {
+//     text-align: justify;
+//     color: $white-color-5;
+//     font-weight: 700;
+//   }
+//   z-index: 3;
+// }
+
 .contact {
   &__container {
     background-color: $secondary-color-3;

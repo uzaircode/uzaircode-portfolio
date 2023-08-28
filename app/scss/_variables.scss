@@ -5,7 +5,7 @@ $primary-color-3: hsl(221, 83%, 45%);
 
 // Secondary colors
 $secondary-color-1: hsl(220, 40%, 6%);
-$secondary-color-2: hsl(221, 39%, 11%);
+$secondary-color-2: rgb(21 21 21 / var(--tw-bg-opacity));
 $secondary-color-3: hsl(220, 39%, 15%);
 
 // White
@@ -19,11 +19,10 @@ $white-color-5: hsl(223, 4%, 68%);
 $black-color: hsl(0, 0%, 0%);
 
 // Typography
-$fs-h1: 2.5rem;
-$fs-h2: 3rem;
+$fs-h1: 4rem;
+$fs-h2: 1.375rem;
 $fs-h3: 2.25rem;
-$fs-h4: 1.875rem;
-$fs-h5: 1.5rem;
+$fs-h4: 0.875rem;
 
 $lead-paragraph-fs: 1.25rem;
 $fs-p: 1rem;

@@ -17,7 +17,6 @@
 
 #box {
   position: relative;
-  overflow: hidden;
   color: white;
 }
 
@@ -31,13 +30,12 @@
   translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
+    177.9deg,
+    rgb(58, 62, 88) 3.6%,
+    rgb(119, 127, 148) 105.8%
   );
   animation: rotate 20s infinite;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 #blur {
@@ -60,56 +58,32 @@
 .main,
 .sidebar {
   // border: 3px solid black;
-  padding: 15px;
-  // background-color: #ffff;
+  // padding: 15px;
 }
 
 .sidebar {
-  // height: 100dvh;
-  align-items: start;
-  position: -webkit-sticky;
+  position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
   width: 40%;
+
+  &__subtitle {
+    margin-top: 52px;
+  }
 }
 
 .main {
-  width: 60%;
+  width: 50%;
 }
 
 .header {
+  margin-top: 72px;
   &__link {
     margin-top: 1.0625rem;
     transition: transform 250ms;
 
     &:hover {
       transform: translatex(10px);
-    }
-  }
-}
-
-// .hero {
-//   display: flex;
-//   justify-content: space-between;
-//   // padding: 0 10rem;
-//   &__subtitle {
-//     text-align: justify;
-//     color: $white-color-5;
-//     font-weight: 700;
-//   }
-//   z-index: 3;
-// }
-
-.contact {
-  &__container {
-    background-color: $secondary-color-3;
-    border-radius: 1rem;
-    &__text {
-      padding: 4.9063rem 2.625rem;
-      text-align: center;
-    }
-    &__text > span {
-      color: $primary-color-2;
     }
   }
 }

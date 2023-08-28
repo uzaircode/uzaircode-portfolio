@@ -1,9 +1,50 @@
 @import 'globals';
 @import 'variables';
 
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.5;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  animation: rotate 20s infinite;
+  opacity: 0.5;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
 .header {
-  nav {
-    margin-top: 1.0625rem;
+  &__nav {
+    padding-top: 1.0625rem;
   }
 }
 
@@ -16,6 +57,7 @@
     color: $white-color-5;
     font-weight: 700;
   }
+  z-index: 3;
 }
 .contact {
   &__container {

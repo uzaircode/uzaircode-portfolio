@@ -51,6 +51,10 @@ a:hover {
   color: $white-color-4;
 }
 
+::selection {
+  background: #000000;
+}
+
 .container {
   max-width: 65rem;
   margin: 0 auto;

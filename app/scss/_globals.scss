@@ -19,8 +19,9 @@ body {
   height: 100%;
   padding: 0;
   line-height: 1.3;
+  --tw-bg-opacity: 1;
   background-color: $secondary-color-2;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Inter', sans-serif;
 }
 
 nav,
@@ -33,6 +34,8 @@ h1,
 h2,
 h3,
 h4 {
+  margin-top: 0;
+  margin-bottom: 0;
   color: $white-color-4;
 }
 
@@ -40,8 +43,14 @@ h1 {
   font-size: $fs-h1;
 }
 
+h2 {
+  font-size: $fs-h2;
+}
+
 p {
   color: $white-color-5;
+  font-size: $fs-h4;
+  line-height: 2;
 }
 
 a,
@@ -56,7 +65,7 @@ a:hover {
 }
 
 .container {
-  max-width: 65rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 

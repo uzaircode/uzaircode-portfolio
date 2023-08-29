@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./images/nik-favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,10 +25,10 @@
     </div>
     <section class="wrapper container">
       <div class="sidebar">
-        <div>
+        <div class="profile">
           <h1>Nik Uzair</h1>
           <h2>Principal Software Engineer at xaround</h2>
-          <p class="sidebar__subtitle">
+          <p class="profile__subtitle">
             I build open-source front-end libraries at Algolia and host <br />
             two tech podcasts: Developer Experience and Entre Devs.
           </p>
@@ -36,21 +36,27 @@
             In my spare time, I share what I learn on my blog and speak <br />
             at tech conferences around the world.
           </p>
-        </div>
-        <div class="header hide-for-mobile">
-          <div class="header__link"><a href="#">About</a></div>
-          <div class="header__link"><a href="#">Experience</a></div>
-          <div class="header__link"><a href="#">Projects</a></div>
+          <div class="header hide-for-mobile">
+            <div class="header__link"><a href="#">About</a></div>
+            <div class="header__link"><a href="#">Experience</a></div>
+            <div class="header__link"><a href="#">Projects</a></div>
+          </div>
         </div>
 
-        <div>
-          <div>
-            <a href="#">LinkedIn</a>
-            <i class="fa-solid fa-up-right-from-square"></i>
-          </div>
-          <div>
-            <a href="#">GitHub</a>
-            <i class="fa-solid fa-up-right-from-square"></i>
+
+        <div class="social">
+          <img src="./images/nik.jpg" alt="nik uzair image" class="social__avatar">
+          <div class="social__test">
+            <div class="social__test_1">
+              <img src="./public/linkedin-icon.svg" alt="linkedin" class="social__icon">
+              <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank" class="social__link">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+            </div>
+            <div>
+              <img src="./public/github-icon.svg" alt="linkedin" class="social__icon">
+              <a href="https://github.com/uzaircode" target="_blank" class="social__link">GitHub</a>
+              <a href="https://github.com/uzaircode" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -203,4 +209,6 @@
 
   </body>
   <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/f9b89f9f6c.js" crossorigin="anonymous"></script>
+
 </html>

@@ -1,3 +1,5 @@
+import './app/scss/style.scss';
+
 console.log('working');
 
 const blob = document.getElementById('blob');

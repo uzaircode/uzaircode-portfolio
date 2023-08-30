@@ -132,3 +132,37 @@
     transform: scale(0.45);
   }
 }
+
+.nav {
+  &__ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      a {
+        color: $white-color-5;
+        max-width: 100%;
+        .wdw {
+          letter-spacing: 4px;
+        }
+        &:hover {
+          color: $white-color-3;
+        }
+      }
+    }
+  }
+
+  &__underline {
+    background-color: rgb(170 172 177 / var(--tw-bg-opacity));
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    margin: 0 16px;
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+  }
+}

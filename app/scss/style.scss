@@ -48,28 +48,35 @@
   backdrop-filter: blur(200px);
 }
 
+.content {
+}
+
 .wrapper {
   padding-top: 4rem;
   display: flex;
-  align-items: start;
-  gap: 1rem;
+  // align-items: start;
+  // padding-top: 4rem;
+  justify-content: center;
+  gap: 3rem;
+  display: flex;
 }
 
 .main,
 .sidebar {
-  // border: 3px solid black;
-  // padding: 15px;
+  padding-top: 40px;
 }
 
 .sidebar {
-  height: 80dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
-  width: 40%;
+  height: 100dvh;
+}
+
+.main {
+  width: 50%;
 }
 
 .profile {
@@ -78,28 +85,11 @@
   }
 }
 
-.main {
-  width: 50%;
-}
-
-.header {
-  margin-top: 72px;
-  &__link {
-    margin-top: 1.0625rem;
-    transition: transform 250ms;
-
-    &:hover {
-      transform: translatex(10px);
-    }
-  }
-}
-
 .social {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
-  // margin-left: 70px;
 
   &__test {
     display: flex;

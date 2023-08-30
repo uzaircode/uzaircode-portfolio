@@ -156,3 +156,13 @@
   &:hover {
   }
 }
+
+.numbered-items {
+  margin-inline: auto;
+}
+
+.numbered-items {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+}

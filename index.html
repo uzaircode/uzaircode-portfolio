@@ -52,6 +52,18 @@ h1 {
 h2 {
   font-size: 1.375rem;
 }
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+}
+nav > ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+}
 p {
   color: hsl(223, 4%, 68%);
   font-size: 0.875rem;
@@ -63,11 +75,14 @@ a:hover {
   text-decoration: none;
   color: hsl(0, 20%, 96%);
 }
+span {
+  font-size: 0.875rem;
+}
 ::selection {
   background: #000000;
 }
 .container {
-  max-width: 90rem;
+  max-width: 75rem;
   margin: 0 auto;
 }
 .flex {
@@ -95,16 +110,15 @@ a:hover {
 }
 #box {
   position: relative;
-  overflow: hidden;
-  color: white;
+  contain: paint;
 }
 #blob {
   background-color: white;
   height: 34vmax;
   aspect-ratio: 1;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0%;
+  top: 0%;
   translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
@@ -112,7 +126,7 @@ a:hover {
   opacity: 0.2;
 }
 #blur {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -121,36 +135,29 @@ a:hover {
   backdrop-filter: blur(200px);
 }
 .wrapper {
-  padding-top: 4rem;
   display: flex;
-  align-items: start;
-  gap: 1rem;
+  justify-content: center;
+  gap: 3rem;
+  display: flex;
+}
+.main,
+.sidebar {
+  padding-top: 40px;
 }
 .sidebar {
-  height: 80dvh;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
-  width: 40%;
-}
-.profile__subtitle {
-  margin-top: 52px;
+  height: 100dvh;
 }
 .main {
   width: 50%;
 }
-.header {
-  margin-top: 72px;
-}
-.header__link {
-  margin-top: 1.0625rem;
-  transition: transform 250ms;
-}
-.header__link:hover {
-  transform: translatex(10px);
+.profile__subtitle {
+  margin-top: 52px;
 }
 .social {
   display: flex;
@@ -184,18 +191,43 @@ a:hover {
   vertical-align: middle;
   transform: scale(0.45);
 }
+.nav__ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav__ul li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.nav__ul li a {
+  color: hsl(223, 4%, 68%);
+  max-width: 100%;
+}
+.nav__ul li a .wdw {
+  letter-spacing: 4px;
+}
+.nav__ul li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+.nav__underline {
+  background-color: rgb(170 172 177/var(--tw-bg-opacity));
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  margin: 0 16px;
+  margin-bottom: 5px;
+}
     </style>
 
     <title>uzaircode</title>
-    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-26cc40f9.js"></script>
-    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-3b1eeb87.css">
+    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-d61ac14c.js"></script>
+    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-de21ccf8.css">
   </head>
 
+  <!-- <body> -->
   <body id="box">
-    <div>
-      <div id="blur"></div>
-      <div id="blob"></div>
-    </div>
+    <div id="blur"></div>
+    <div id="blob"></div>
     <section class="wrapper container">
       <div class="sidebar">
         <div class="profile">
@@ -209,26 +241,71 @@ a:hover {
             In my spare time, I share what I learn on my blog and speak <br />
             at tech conferences around the world.
           </p>
-          <div class="header hide-for-mobile">
-            <div class="header__link"><a href="#">About</a></div>
-            <div class="header__link"><a href="#">Experience</a></div>
-            <div class="header__link"><a href="#">Projects</a></div>
-          </div>
         </div>
-
+        <nav class="nav">
+          <ul class="nav__ul">
+            <li>
+              <a href="#">
+                <span>01</span>
+                <span class="nav__underline"></span>
+                <span class="wdw">About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>02</span>
+                <span class="nav__underline"></span>
+                <span class="wdw">Experience</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span>03</span>
+                <span class="nav__underline"></span>
+                <span class="wdw">Project</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
         <div class="social">
-          <img src="/uzaircode-portfolio/assets/nik-bde8ae1f.jpg" alt="nik uzair image" class="social__avatar">
+          <img
+            src="/uzaircode-portfolio/assets/nik-bde8ae1f.jpg"
+            alt="nik uzair image"
+            class="social__avatar"
+          />
           <div class="social__test">
             <div class="social__test_1">
-              <img src="/uzaircode-portfolio/assets/linkedin-icon-4cc4489c.svg" alt="linkedin" class="social__icon">
-              <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank" class="social__link">LinkedIn</a>
-              <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+              <img
+                src="/uzaircode-portfolio/assets/linkedin-icon-4cc4489c.svg"
+                alt="linkedin"
+                class="social__icon"
+              />
+              <a
+                href="https://www.linkedin.com/in/nikuzairsc/"
+                target="_blank"
+                class="social__link"
+                >LinkedIn</a
+              >
+              <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i
+              ></a>
             </div>
             <div>
-              <img src="/uzaircode-portfolio/assets/github-icon-17e6eb15.svg" alt="linkedin" class="social__icon">
-              <a href="https://github.com/uzaircode" target="_blank" class="social__link">GitHub</a>
-              <a href="https://github.com/uzaircode" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
+              <img
+                src="/uzaircode-portfolio/assets/github-icon-17e6eb15.svg"
+                alt="linkedin"
+                class="social__icon"
+              />
+              <a
+                href="https://github.com/uzaircode"
+                target="_blank"
+                class="social__link"
+                >GitHub</a
+              >
+              <a href="https://github.com/uzaircode" target="_blank"
+                ><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -281,107 +358,155 @@ a:hover {
           </div>
           <div>
             <p>
-              Curabitur imperdiet justo at semper sodales. Morbi dignissim erat
-              tellus, id gravida metus bibendum nec. Duis at tortor mattis purus
-              sagittis interdum. Sed cursus nibh suscipit mauris aliquet
-              iaculis. Donec fringilla quam ac pulvinar blandit. Sed
-              ullamcorper, elit vitae euismod rhoncus, eros nulla pulvinar
-              tellus, ac cursus urna sapien a ex. Nam sed metus non ante
-              consectetur blandit. Donec leo augue, vulputate sit amet finibus
-              nec, semper id justo. Ut faucibus lorem eget ipsum vestibulum
-              posuere. Fusce id tempor arcu. In bibendum vitae massa vitae
-              congue. Aenean eget justo urna. Pellentesque hendrerit facilisis
-              diam, quis scelerisque justo.
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
             </p>
           </div>
         </div>
         <div>
           <div>
             <p>
-              Cras vitae venenatis dui. Suspendisse vehicula, sapien a hendrerit
-              placerat, augue mi elementum dolor, a eleifend felis velit non
-              lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius, tortor ut porttitor tincidunt, turpis nisl
-              bibendum tortor, quis semper dolor tortor id est. Nullam
-              sollicitudin ante tortor. Praesent rhoncus vitae tortor in
-              ultrices. Cras nunc eros, sagittis vitae sem vitae, fringilla
-              sagittis magna. Mauris ac ornare augue. Vivamus quis est sagittis,
-              posuere nisl iaculis, luctus massa. Cras quis nisl a dui luctus
-              aliquet. Cras lacus felis, volutpat quis tempor vitae, scelerisque
-              at mi. Cras ut sollicitudin sem. In sagittis, purus nec elementum
-              convallis, elit nibh laoreet sem, at vehicula nibh augue sit amet
-              nulla. Nunc vel rutrum arcu. Etiam accumsan non leo nec ultricies.
+              Back in 2012, I decided to try my hand at creating custom Tumblr
+              themes and tumbled head first into the rabbit hole of coding and
+              web development. Fast-forward to today, and I’ve had the privilege
+              of building software for an advertising agency, a start-up, a
+              student-led design studio, and a huge corporation.
             </p>
           </div>
           <div>
             <p>
-              Curabitur imperdiet justo at semper sodales. Morbi dignissim erat
-              tellus, id gravida metus bibendum nec. Duis at tortor mattis purus
-              sagittis interdum. Sed cursus nibh suscipit mauris aliquet
-              iaculis. Donec fringilla quam ac pulvinar blandit. Sed
-              ullamcorper, elit vitae euismod rhoncus, eros nulla pulvinar
-              tellus, ac cursus urna sapien a ex. Nam sed metus non ante
-              consectetur blandit. Donec leo augue, vulputate sit amet finibus
-              nec, semper id justo. Ut faucibus lorem eget ipsum vestibulum
-              posuere. Fusce id tempor arcu. In bibendum vitae massa vitae
-              congue. Aenean eget justo urna. Pellentesque hendrerit facilisis
-              diam, quis scelerisque justo.
+              My main focus these days is building products and leading projects
+              for our clients at Upstatement. In my free time I've also released
+              an online video course that covers everything you need to know to
+              build a web app with the Spotify API.
             </p>
           </div>
           <div>
             <p>
-              "At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga. Et harum quidem rerum
-              facilis est et expedita distinctio. Nam libero tempore, cum soluta
-              nobis est eligendi optio cumque nihil impedit quo minus id quod
-              maxime placeat facere possimus, omnis voluptas assumenda est,
-              omnis dolor repellendus. Temporibus autem quibusdam et aut
-              officiis debitis aut rerum necessitatibus saepe eveniet ut et
-              voluptates repudiandae sint et molestiae non recusandae. Itaque
-              earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-              voluptatibus maiores alias consequatur aut perferendis doloribus
-              asperiores repellat."
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
             </p>
           </div>
         </div>
         <div>
           <div>
             <p>
-              Cras vitae venenatis dui. Suspendisse vehicula, sapien a hendrerit
-              placerat, augue mi elementum dolor, a eleifend felis velit non
-              lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius, tortor ut porttitor tincidunt, turpis nisl
-              bibendum tortor, quis semper dolor tortor id est. Nullam
-              sollicitudin ante tortor. Praesent rhoncus vitae tortor in
-              ultrices. Cras nunc eros, sagittis vitae sem vitae, fringilla
-              sagittis magna. Mauris ac ornare augue. Vivamus quis est sagittis,
-              posuere nisl iaculis, luctus massa. Cras quis nisl a dui luctus
-              aliquet. Cras lacus felis, volutpat quis tempor vitae, scelerisque
-              at mi. Cras ut sollicitudin sem. In sagittis, purus nec elementum
-              convallis, elit nibh laoreet sem, at vehicula nibh augue sit amet
-              nulla. Nunc vel rutrum arcu. Etiam accumsan non leo nec ultricies.
+              Back in 2012, I decided to try my hand at creating custom Tumblr
+              themes and tumbled head first into the rabbit hole of coding and
+              web development. Fast-forward to today, and I’ve had the privilege
+              of building software for an advertising agency, a start-up, a
+              student-led design studio, and a huge corporation.
             </p>
           </div>
           <div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque nec tellus sed lorem vulputate vestibulum vitae at
-              nibh. Pellentesque feugiat sed erat a interdum. Nullam sit amet
-              nibh nulla. Donec fermentum egestas nulla id dignissim. Mauris
-              purus justo, venenatis et vehicula sed, hendrerit et purus.
-              Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras
-              augue augue, pellentesque a nulla sit amet, venenatis sodales
-              felis.
+              My main focus these days is building products and leading projects
+              for our clients at Upstatement. In my free time I've also released
+              an online video course that covers everything you need to know to
+              build a web app with the Spotify API.
             </p>
           </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+          <div>
+            <p>
+              When I’m not at the computer, I’m usually rock climbing, hanging
+              out with my wife and two cats, or running around Hyrule searching
+              for cats
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-
+    <div id="box"></div>
   </body>
   
-  <script src="https://kit.fontawesome.com/f9b89f9f6c.js" crossorigin="anonymous"></script>
-
+  <script
+    src="https://kit.fontawesome.com/f9b89f9f6c.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

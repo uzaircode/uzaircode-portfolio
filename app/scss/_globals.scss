@@ -47,6 +47,21 @@ h2 {
   font-size: $fs-h2;
 }
 
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
 p {
   color: $white-color-5;
   font-size: $fs-h4;
@@ -60,12 +75,16 @@ a:hover {
   color: $white-color-4;
 }
 
+span {
+  font-size: $fs-h4;
+}
+
 ::selection {
   background: #000000;
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 75rem;
   margin: 0 auto;
 }
 

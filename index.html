@@ -12,91 +12,127 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style lang="sass">@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+    <style lang="sass">:root {
+  --background-color: rgb(21 21 21);
+  --primary-color-1: hsl(221, 83%, 61%);
+  --primary-color-2: hsl(221, 83%, 53%);
+  --primary-color-3: hsl(221, 83%, 45%);
+  --secondary-color-1: hsl(220, 40%, 6%);
+  --secondary-color-2: rgb(21 21 21);
+  --secondary-color-3: hsl(220, 39%, 15%);
+  --white-color-1: hsl(210, 22%, 91%);
+  --white-color-2: hsl(210, 23%, 95%);
+  --white-color-3: hsl(0, 0%, 100%);
+  --white-color-4: hsl(0, 20%, 96%);
+  --white-color-5: hsl(223, 4%, 68%);
+  --black-color: hsl(0, 0%, 0%);
+}
+
 html {
-  font-size: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
+  font-size: 100%;
   margin: 0;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
-  height: 100%;
   padding: 0;
   line-height: 1.3;
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 21 21/var(--tw-bg-opacity));
   font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  --tw-bg-opacity: 1;
 }
-nav,
-section {
-  position: relative;
-  z-index: 3;
+
+::selection {
+  background: #000000;
 }
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
 h1,
 h2,
 h3,
 h4 {
   margin-top: 0;
   margin-bottom: 0;
-  color: hsl(0, 20%, 96%);
+  color: var(--white-color-4);
 }
+
+p {
+  margin-top: 0;
+  color: var(--white-color-5);
+  font-size: 16px;
+  line-height: 2;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--white-color-4);
+}
+
+nav,
+section {
+  position: relative;
+  z-index: 3;
+}
+
 h1 {
-  font-size: 4rem;
+  color: #ffffff;
 }
+
 h2 {
-  font-size: 1.375rem;
+  color: #ffffff;
 }
+
 ol,
 ul {
   list-style: none;
   margin: 0;
 }
-nav > ul {
+
+* > ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   float: left;
 }
-p {
-  color: hsl(223, 4%, 68%);
-  font-size: 0.875rem;
-  line-height: 2;
-}
+
 a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: hsl(0, 20%, 96%);
+  color: #ffffff;
 }
-span {
-  font-size: 0.875rem;
-}
-::selection {
-  background: #000000;
-}
-.container {
-  max-width: 75rem;
-  margin: 0 auto;
-}
-.flex {
-  display: flex;
-}
-.flex-jc-sb {
-  justify-content: space-between;
-}
-.flex-jc-c {
-  justify-content: center;
-}
-.flex-ai-c {
-  align-items: center;
-}
+
 @keyframes rotate {
   from {
     rotate: 0deg;
@@ -108,10 +144,12 @@ span {
     rotate: 360deg;
   }
 }
+
 #box {
   position: relative;
-  contain: paint;
+  contain: content;
 }
+
 #blob {
   background-color: white;
   height: 34vmax;
@@ -125,6 +163,7 @@ span {
   animation: rotate 20s infinite;
   opacity: 0.2;
 }
+
 #blur {
   height: 100%;
   width: 100%;
@@ -134,81 +173,91 @@ span {
   z-index: 2;
   backdrop-filter: blur(200px);
 }
+
 .wrapper {
   display: flex;
+  align-items: start;
+  padding-bottom: 5rem;
   justify-content: center;
   gap: 3rem;
   display: flex;
 }
+
 .main,
 .sidebar {
   padding-top: 40px;
 }
+
 .sidebar {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-between;
+  height: 90dvh;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
-  height: 100dvh;
 }
+
 .main {
   width: 50%;
 }
+
 .profile__subtitle {
   margin-top: 52px;
 }
+
 .social {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   align-items: center;
 }
+
 .social__test {
   display: flex;
   gap: 1rem;
   width: 100%;
 }
+
 .social__test_1 {
   align-items: center;
 }
+
 .social__avatar {
   vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
+
 .social__link {
-  font-size: 0.875rem;
   margin-right: 3px;
 }
-.social__link:hover {
-  color: hsl(0, 0%, 100%);
-}
+
 .social__icon {
   margin-bottom: 3px;
   vertical-align: middle;
   transform: scale(0.45);
 }
+
 .nav__ul {
   display: flex;
   flex-direction: column;
 }
+
 .nav__ul li {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
 .nav__ul li a {
-  color: hsl(223, 4%, 68%);
   max-width: 100%;
 }
+
 .nav__ul li a .wdw {
   letter-spacing: 4px;
 }
-.nav__ul li a:hover {
-  color: hsl(0, 0%, 100%);
-}
+
 .nav__underline {
   background-color: rgb(170 172 177/var(--tw-bg-opacity));
   display: inline-block;
@@ -217,11 +266,33 @@ span {
   margin: 0 16px;
   margin-bottom: 5px;
 }
+
+.numbered-items {
+  margin-inline: auto;
+}
+
+.numbered-items {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+}
+
+.project {
+  background-color: hsl(240, 3%, 12%);
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.design {
+  font-size: 0.875rem;
+}
     </style>
 
     <title>uzaircode</title>
-    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-d61ac14c.js"></script>
-    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-de21ccf8.css">
+    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-473cc2a2.js"></script>
+    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-0c5b66ff.css">
   </head>
 
   <!-- <body> -->
@@ -338,7 +409,67 @@ span {
             </p>
           </div>
         </div>
+        <br>
+        <br>
         <div>
+          <ul  role="list">
+            <li>
+              <div class="numbered-items">
+                <div>
+                  <p>2018-2020</p>
+                </div>
+                <div>
+                    <h3>Lead Engineer · Upstatement</h3>
+                    <p>
+                    Deliver high-quality, robust production code for a diverse array
+                    of projects for clients including Harvard Business School,
+                    Everytown for Gun Safety, Pratt Institute, Koala Health,
+                    Vanderbilt University, The 19th News, and more. Provide
+                    leadership within engineering department through close
+                    collaboration, knowledge shares, and mentorship.
+                    </p>
+                  </div>
+              </div>
+              <br>
+              <br>
+              <div class="numbered-items">
+                <div>
+                  <p>2021-2022</p>
+                </div>
+                <div>
+                    <h3>Developer · Scout Studio</h3>
+                    <p>
+                      Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+                    </p>
+                  </div>
+              </div>
+              <div class="project">
+                <br>
+                <h4>Typescript</h4>
+                <br>
+                <h1>dinerojs/dinero.js</h1>
+                <p>Create, calculate and format money in JavaScript and TypeScript</p>
+              </div>
+              <div class="project">
+                <h4>Node JS</h4>
+                <h1>algolia/autocomplete</h1>
+                <p>fast and full-featured autocomplete library</p>
+              </div>
+              <div class="project">
+                <h4>Python Django</h4>
+                <h1>algolia/ui-components</h1>
+                <p>Libraries for building performant and instant search experiences with Algolia.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <p class="design">
+          Loosely designed in Figma and coded in Visual Studio Code by yours truly.
+          Built with Next.js and Tailwind CSS, deployed with Vercel.
+          All text is set in the Inter typeface.
+        </p>
+
+        <!-- <div>
           <div>
             <p>
               Back in 2012, I decided to try my hand at creating custom Tumblr
@@ -498,7 +629,7 @@ span {
               out with my wife and two cats, or running around Hyrule searching
               for cats
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

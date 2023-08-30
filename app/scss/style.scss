@@ -53,8 +53,8 @@
 
 .wrapper {
   display: flex;
-  // align-items: start;
-  // padding-top: 4rem;
+  align-items: start;
+  padding-bottom: 5rem;
   justify-content: center;
   gap: 3rem;
   display: flex;
@@ -67,12 +67,12 @@
 
 .sidebar {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
+  justify-content: space-between;
+  height: 90dvh;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
-  height: 100dvh;
 }
 
 .main {
@@ -173,4 +173,8 @@
   margin-top: 30px;
   margin-bottom: 30px;
   cursor: pointer;
+}
+
+.design {
+  font-size: 0.875rem;
 }

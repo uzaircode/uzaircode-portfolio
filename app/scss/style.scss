@@ -1,5 +1,5 @@
-@import 'globals';
-@import 'variables';
+@forward 'base';
+@forward 'utilities';
 
 @keyframes rotate {
   from {
@@ -17,7 +17,7 @@
 
 #box {
   position: relative;
-  contain: paint;
+  contain: content;
 }
 
 #blob {
@@ -52,7 +52,6 @@
 }
 
 .wrapper {
-  padding-top: 4rem;
   display: flex;
   // align-items: start;
   // padding-top: 4rem;
@@ -68,6 +67,7 @@
 
 .sidebar {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
@@ -109,10 +109,10 @@
   }
 
   &__link {
-    font-size: $fs-h4;
+    // font-size: $fs-h4;
     margin-right: 3px;
     &:hover {
-      color: $white-color-3;
+      // color: $white-color-3;
     }
   }
 
@@ -132,13 +132,13 @@
       margin-top: 1rem;
       margin-bottom: 1rem;
       a {
-        color: $white-color-5;
+        // color: $white-color-5;
         max-width: 100%;
         .wdw {
           letter-spacing: 4px;
         }
         &:hover {
-          color: $white-color-3;
+          // color: $white-color-3;
         }
       }
     }

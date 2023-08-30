@@ -17,8 +17,7 @@
 
 #box {
   position: relative;
-  overflow: hidden;
-  color: white;
+  contain: paint;
 }
 
 #blob {
@@ -26,8 +25,8 @@
   height: 34vmax;
   aspect-ratio: 1;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0%;
+  top: 0%;
   translate: -50% -50%;
   border-radius: 50%;
   background: linear-gradient(
@@ -40,7 +39,7 @@
 }
 
 #blur {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: fixed;
   top: 0;

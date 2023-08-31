@@ -9,6 +9,6 @@ document.body.onpointermove = (event) => {
 
   blob.animate(
     { left: `${pageX}px`, top: `${pageY}px` },
-    { duration: 3000, fill: 'forwards' }
+    { duration: 2500, fill: 'forwards' }
   );
 };

@@ -54,8 +54,7 @@
   display: flex;
   align-items: start;
   padding-bottom: 5rem;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-between;
   display: flex;
 }
 
@@ -67,11 +66,14 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 90dvh;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
+
+  div:last-of-type {
+    margin-top: auto;
+  }
 }
 
 .main {
@@ -123,6 +125,7 @@
 }
 
 .nav {
+  margin-top: 2rem;
   &__ul {
     display: flex;
     flex-direction: column;
@@ -131,7 +134,7 @@
       margin-top: 1rem;
       margin-bottom: 1rem;
       a {
-        // color: $white-color-5;
+        color: hsl(223, 4%, 68%);
         max-width: 100%;
         .wdw {
           letter-spacing: 4px;
@@ -176,4 +179,6 @@
 
 .design {
   font-size: 0.875rem;
+  padding: 0 4rem;
+  text-align: center;
 }

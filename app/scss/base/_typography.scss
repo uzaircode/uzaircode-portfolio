@@ -1,4 +1,4 @@
-@use '../utilities';
+@use '../utilities/variables';
 
 h1,
 h2,
@@ -12,8 +12,7 @@ h4 {
 p {
   margin-top: 0;
   color: var(--white-color-5);
-  // font-size: $fs-h4;
-  font-size: 16px;
+  font-size: variables.$fs-h4;
   line-height: 2;
 }
 
@@ -31,12 +30,12 @@ section {
 }
 
 h1 {
-  // font-size: $fs-h1;
+  font-size: variables.$fs-h1;
   color: #ffffff;
 }
 
 h2 {
-  // font-size: $fs-h2;
+  font-size: variables.$fs-h2;
   color: #ffffff;
 }
 
@@ -64,5 +63,5 @@ a:hover {
 }
 
 span {
-  // font-size: $fs-h4;
+  font-size: variables.$fs-h4;
 }

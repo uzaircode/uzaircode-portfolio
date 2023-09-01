@@ -126,6 +126,17 @@
 
 .nav {
   margin-top: 2rem;
+
+  &__underline {
+    background-color: rgb(170 172 177 / var(--tw-bg-opacity));
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    margin: 0 16px;
+    margin-bottom: 5px;
+    transition: width 0.15s ease;
+  }
+
   &__ul {
     display: flex;
     flex-direction: column;
@@ -139,23 +150,16 @@
         .wdw {
           letter-spacing: 4px;
         }
-        &:hover {
-          // color: $white-color-3;
+        &:hover,
+        &.active {
+          /* Apply the same styles for active state as hover state */
+          color: white;
+          & .nav__underline {
+            width: 48px;
+          }
         }
       }
     }
-  }
-
-  &__underline {
-    background-color: rgb(170 172 177 / var(--tw-bg-opacity));
-    display: inline-block;
-    width: 24px;
-    height: 1px;
-    margin: 0 16px;
-    margin-bottom: 5px;
-  }
-
-  &:hover {
   }
 }
 

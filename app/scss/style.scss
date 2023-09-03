@@ -163,20 +163,36 @@
   }
 }
 
-.numbered-items {
-  margin-inline: auto;
-}
-
-.numbered-items {
+.resume {
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 3rem;
+  margin-inline: auto;
+
+  &__date {
+    p {
+      color: var(--white-color-6);
+    }
+  }
+}
+
+.resume__job {
+  &-title {
+    font-weight: 400;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &-tech {
+    color: var(--white-color-6);
+  }
 }
 
 .project {
-  background-color: hsl(240, 3%, 12%);
+  background-color: rgb(18, 18, 18);
   transition: all 0.2s ease-in-out;
   &:hover {
+    background-color: hsl(0, 0%, 10%);
     transform: scale(1.1);
   }
   padding: 2rem 3rem;
@@ -191,7 +207,7 @@
   text-align: center;
 }
 
-.resume {
+.project__archive {
   i {
     transition: all 0.15s ease;
   }

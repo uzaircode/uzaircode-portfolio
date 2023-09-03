@@ -175,6 +175,10 @@
 
 .project {
   background-color: hsl(240, 3%, 12%);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
   padding: 2rem 3rem;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -185,4 +189,18 @@
   font-size: 0.875rem;
   padding: 0 4rem;
   text-align: center;
+}
+
+.resume {
+  i {
+    transition: all 0.15s ease;
+  }
+  &:hover {
+    p {
+      color: #ffffff;
+    }
+    i {
+      margin-left: 10px;
+    }
+  }
 }

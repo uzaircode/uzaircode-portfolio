@@ -17,9 +17,10 @@
   --white-color-3: hsl(0, 0%, 100%);
   --white-color-4: hsl(0, 20%, 96%);
   --white-color-5: hsl(223, 4%, 68%);
+  --white-color-6: hsl(0, 0%, 50%);
 
   // Black
-  --black-color: hsl(0, 0%, 0%);
+  --black-color: rgb(0, 0, 0);
 }
 
 // Typography
@@ -29,4 +30,4 @@ $fs-h3: 2.25rem;
 $fs-h4: 0.875rem;
 
 $lead-paragraph-fs: 1.25rem;
-$fs-p: 1rem;
+$fs-p: 0.875rem;

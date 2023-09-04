@@ -1,0 +1,12 @@
+.project {
+  background-color: rgb(18, 18, 18);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: hsl(0, 0%, 10%);
+    transform: scale(1.1);
+  }
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}

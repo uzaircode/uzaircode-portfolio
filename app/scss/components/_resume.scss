@@ -1,0 +1,24 @@
+.resume {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+  margin-inline: auto;
+
+  &__date {
+    p {
+      color: var(--white-color-6);
+    }
+  }
+}
+
+.resume__job {
+  &-title {
+    font-weight: 400;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &-tech {
+    color: var(--white-color-6);
+  }
+}

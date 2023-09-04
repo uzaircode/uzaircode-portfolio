@@ -1,0 +1,42 @@
+.nav {
+  margin-top: 2rem;
+
+  &__underline {
+    background-color: rgb(170 172 177 / var(--tw-bg-opacity));
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    margin: 0 16px;
+    margin-bottom: 5px;
+    transition: width 0.15s ease;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    max-width: 100%;
+    span {
+      color: hsl(223, 4%, 68%);
+    }
+
+    &:hover,
+    .active {
+      /* Apply the same styles for active state as hover state */
+      color: white;
+      .nav__underline {
+        width: 48px;
+      }
+    }
+  }
+  &__label {
+    letter-spacing: 4px;
+  }
+}

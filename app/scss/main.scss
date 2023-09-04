@@ -1,0 +1,37 @@
+@forward 'base';
+@forward 'utilities';
+@forward 'components';
+@forward 'layout';
+.wrapper {
+  display: flex;
+  align-items: start;
+  padding-bottom: 5rem;
+  gap: 5rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.content,
+.sidebar {
+  padding-top: 40px;
+}
+
+.design {
+  font-size: 0.875rem;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.project__archive {
+  i {
+    transition: all 0.15s ease;
+  }
+  &:hover {
+    p {
+      color: #ffffff;
+    }
+    i {
+      margin-left: 10px;
+    }
+  }
+}

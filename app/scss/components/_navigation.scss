@@ -39,4 +39,12 @@
   &__label {
     letter-spacing: 4px;
   }
+  &__link.active {
+    span {
+      color: white;
+    }
+    .nav__underline {
+      color: white;
+    }
+  }
 }

@@ -26,7 +26,7 @@
   --white-color-4: hsl(0, 20%, 96%);
   --white-color-5: hsl(223, 4%, 68%);
   --white-color-6: hsl(0, 0%, 50%);
-  --black-color: hsl(0, 0%, 0%);
+  --black-color: rgb(0, 0, 0);
 }
 
 html {
@@ -52,7 +52,7 @@ body {
 }
 
 ::selection {
-  background: #000000;
+  background: hsl(0, 0%, 25%);
 }
 
 .container {
@@ -182,38 +182,100 @@ span {
   backdrop-filter: blur(200px);
 }
 
-.wrapper {
-  display: flex;
-  align-items: start;
-  padding-bottom: 5rem;
-  justify-content: space-between;
-  display: flex;
+.bio__subtitle {
+  margin-bottom: 20px;
 }
 
-.main,
-.sidebar {
-  padding-top: 40px;
+.nav {
+  margin-top: 2rem;
 }
 
-.sidebar {
+.nav__underline {
+  background-color: rgb(170 172 177/var(--tw-bg-opacity));
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  margin: 0 16px;
+  margin-bottom: 5px;
+  transition: width 0.15s ease;
+}
+
+.nav__list {
   display: flex;
   flex-direction: column;
-  height: 90dvh;
-  position: -webkit-sticky; /* for Safari */
-  position: sticky;
-  top: 0;
 }
 
-.sidebar div:last-of-type {
-  margin-top: auto;
+.nav__item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.main {
-  width: 50%;
+.nav__link {
+  max-width: 100%;
 }
 
-.profile__subtitle {
-  margin-top: 52px;
+.nav__link span {
+  color: hsl(223, 4%, 68%);
+}
+
+.nav__link:hover,
+.nav__link .active {
+  /* Apply the same styles for active state as hover state */
+  color: white;
+}
+
+.nav__link:hover .nav__underline,
+.nav__link .active .nav__underline {
+  width: 48px;
+}
+
+.nav__label {
+  letter-spacing: 4px;
+}
+
+.nav__link.active span {
+  color: white;
+}
+
+.nav__link.active .nav__underline {
+  color: white;
+}
+
+.project {
+  background-color: rgb(18, 18, 18);
+  transition: all 0.2s ease-in-out;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.project:hover {
+  background-color: hsl(0, 0%, 10%);
+  transform: scale(1.1);
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+  margin-inline: auto;
+}
+
+.resume__date p {
+  color: var(--white-color-6);
+}
+
+.resume__job-title {
+  font-weight: 400;
+}
+
+.resume__job-title:hover {
+  text-decoration: underline;
+}
+
+.resume__job-tech {
+  color: var(--white-color-6);
 }
 
 .social {
@@ -250,83 +312,31 @@ span {
   transform: scale(0.45);
 }
 
-.nav {
-  margin-top: 2rem;
-}
-
-.nav__underline {
-  background-color: rgb(170 172 177/var(--tw-bg-opacity));
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  margin: 0 16px;
-  margin-bottom: 5px;
-  transition: width 0.15s ease;
-}
-
-.nav__ul {
+.sidebar {
   display: flex;
   flex-direction: column;
+  height: 90dvh;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
 }
 
-.nav__ul li {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.sidebar div:last-of-type {
+  margin-top: auto;
 }
 
-.nav__ul li a {
-  color: hsl(223, 4%, 68%);
-  max-width: 100%;
+.wrapper {
+  display: flex;
+  align-items: start;
+  padding-bottom: 5rem;
+  gap: 5rem;
+  justify-content: space-between;
+  display: flex;
 }
 
-.nav__ul li a .wdw {
-  letter-spacing: 4px;
-}
-
-.nav__ul li a:hover, .nav__ul li a.active {
-  /* Apply the same styles for active state as hover state */
-  color: white;
-}
-
-.nav__ul li a:hover .nav__underline, .nav__ul li a.active .nav__underline {
-  width: 48px;
-}
-
-.resume {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 3rem;
-  margin-inline: auto;
-}
-
-.resume__date p {
-  color: var(--white-color-6);
-}
-
-.resume__job-title {
-  font-weight: 400;
-}
-
-.resume__job-title:hover {
-  text-decoration: underline;
-}
-
-.resume__job-tech {
-  color: var(--white-color-6);
-}
-
-.project {
-  background-color: rgb(18, 18, 18);
-  transition: all 0.2s ease-in-out;
-  padding: 2rem 3rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-
-.project:hover {
-  background-color: hsl(0, 0%, 10%);
-  transform: scale(1.1);
+.content,
+.sidebar {
+  padding-top: 40px;
 }
 
 .design {
@@ -349,8 +359,8 @@ span {
     </style>
 
     <title>uzaircode</title>
-    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-17c3b166.js"></script>
-    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-355bae67.css">
+    <script type="module" crossorigin src="/uzaircode-portfolio/assets/index-2d3575ad.js"></script>
+    <link rel="stylesheet" href="/uzaircode-portfolio/assets/index-c7a8e7ad.css">
   </head>
 
   <!-- <body> -->
@@ -359,45 +369,44 @@ span {
     <!-- <div id="blob"></div> -->
     <section class="wrapper container">
       <div class="sidebar">
-        <div class="profile">
-          <h1>Nik Uzair</h1>
-          <h2>Principal Software Engineer at xaround</h2>
-          <p class="profile__subtitle">
+        <div class="bio">
+          <h1 class="bio__title">Nik Uzair</h1>
+          <h2 class="bio__subtitle">Principal Software Engineer at xaround</h2>
+          <p class="bio__description">
             Etiam vel est justo. Integer sit amet lorem odio. Class aptent
-            taciti <br />
-            sociosqu ad litora torquent per conubia nostra. Phasellus varius
+            taciti sociosqu ad litora torquent per conubia nostra. Phasellus
+            varius
           </p>
           <p>
-            Mauris consequat leo quis magna rutrum blandit. Pellentesque <br />
-            elit, Phasellus et blandit nibh.
+            Mauris consequat leo quis magna rutrum blandit. Pellentesque elit,
+            Phasellus et blandit nibh.
           </p>
         </div>
         <nav class="nav">
-          <ul class="nav__ul">
-            <li>
-              <a href="#" class="active">
-                <span>01</span>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link active">
+                <span class="nav__number">01</span>
                 <span class="nav__underline"></span>
-                <span class="wdw">About</span>
+                <span class="nav__label">About</span>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span>02</span>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__number">02</span>
                 <span class="nav__underline"></span>
-                <span class="wdw">Experience</span>
+                <span class="nav__label">Experience</span>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span>03</span>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <span class="nav__number">03</span>
                 <span class="nav__underline" id="active"></span>
-                <span class="wdw">Highlight Project</span>
+                <span class="nav__label">Highlight Project</span>
               </a>
             </li>
           </ul>
         </nav>
-
         <div class="social">
           <img
             src="/uzaircode-portfolio/assets/nik-bde8ae1f.jpg"
@@ -407,7 +416,7 @@ span {
           <div class="social__test">
             <div class="social__test_1">
               <img
-                src="/uzaircode-portfolio/assets/linkedin-icon-4cc4489c.svg"
+                src="/uzaircode-portfolio/linkedin-icon.svg"
                 alt="linkedin"
                 class="social__icon"
               />
@@ -422,11 +431,7 @@ span {
               ></a>
             </div>
             <div>
-              <img
-                src="/uzaircode-portfolio/assets/github-icon-17e6eb15.svg"
-                alt="linkedin"
-                class="social__icon"
-              />
+              <img src="/uzaircode-portfolio/github-icon.svg" alt="linkedin" class="social__icon" />
               <a
                 href="https://github.com/uzaircode"
                 target="_blank"
@@ -441,38 +446,31 @@ span {
         </div>
       </div>
 
-      <div class="main">
-        <div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              ullamcorper ultricies neque quis maximus. Nam sit amet odio
-              lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum sed libero eget ex malesuada dignissim. Proin eget
-              pulvinar turpis. Phasellus molestie tellus vitae pulvinar egestas.
-              Donec interdum suscipit nisl, non gravida Phasellus
-            </p>
-          </div>
-          <div>
-            <p>
-              Nullam vulputate faucibus massa ac rhoncus. Aliquam sagittis,
-              dolor et tincidunt pretium, nulla felis sollicitudin elit, ac
-              gravida quam magna vestibulum ex.
-            </p>
-          </div>
-          <div>
-            <p>
-              Vivamus aliquam lorem leo, vitae congue mi egestas id. Phasellus
-              vitae dui efficitur ipsum suscipit pellentesque at sed odio. Fusce
-              lectus magna, congue vel ultricies vel, laoreet vitae massa.
-            </p>
-          </div>
-        </div>
-        <br />
-        <br />
+      <div class="content">
         <div>
           <ul role="list">
             <li>
+              <div class="resume">
+                <div class="resume__date">
+                  <p>07/2023 – Present</p>
+                </div>
+                <div class="resume__job resume__job--lead">
+                  <a href="https://www.inglab.my/" target="_blank"
+                    ><h3 class="resume__job-title">
+                      Lead Engineer · Twitter
+                    </h3></a
+                  >
+                  <p class="resume__job-description">
+                    Suspendisse sed diam sit amet tortor commodo vehicula
+                    dapibus non justo. Cras vitae pellentesque dui. Maecenas
+                    gravida vulputate est id finibus.
+                  </p>
+                  <p class="resume__job-tech">
+                    React • NodeJS • GitHub • Postman • Figma • PostgreSQL
+                  </p>
+                </div>
+              </div>
+              <br />
               <div class="resume">
                 <div class="resume__date">
                   <p>07/2022 – 09/2022</p>
@@ -480,7 +478,7 @@ span {
                 <div class="resume__job resume__job--lead">
                   <a href="https://www.inglab.my/" target="_blank"
                     ><h3 class="resume__job-title">
-                      Lead Engineer · Inglab
+                      Flutter Engineer · Inglab
                     </h3></a
                   >
                   <p class="resume__job-description">
@@ -493,7 +491,6 @@ span {
                   </p>
                 </div>
               </div>
-              <br />
               <a
                 href="public/Nik_Uzair_Resume.pdf"
                 target="_blank"
@@ -502,9 +499,7 @@ span {
               </a>
               <br />
               <div class="project">
-                <br />
                 <h4>Typescript</h4>
-                <br />
                 <h2>dinerojs/dinero.js</h2>
                 <p>
                   Curabitur sed leo viverra, tincidunt turpis ut, porttitor
@@ -513,7 +508,6 @@ span {
               </div>
               <div class="project">
                 <h4>Node JS</h4>
-                <br />
                 <h2>algolia/autocomplete</h2>
                 <p>
                   Praesent molestie ligula et lorem tristique, in feugiat odio
@@ -522,7 +516,6 @@ span {
               </div>
               <div class="project">
                 <h4>Python Django</h4>
-                <br />
                 <h2>algolia/ui-components</h2>
                 <p>
                   Vivamus cursus tellus sit amet quam tempor molestie. Praesent
@@ -535,6 +528,7 @@ span {
             ><p>View Project Archive <i class="fa-solid fa-arrow-right"></i></p>
           </a>
           <br />
+          <br />
         </div>
         <p class="design">
           Quisque justo velit, fringilla non laoreet at, malesuada cursus arcu.
@@ -543,7 +537,6 @@ span {
         </p>
       </div>
     </section>
-    <div id="box"></div>
   </body>
   
   <script

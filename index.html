@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./images/nik-favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style lang="sass">
       @import url('./app/scss/main.scss');
     </style>
@@ -24,7 +24,7 @@
     <!-- <div id="blur"></div>
     <div id="blob"></div> -->
     <section class="wrapper container">
-      <div class="sidebar">
+      <aside class="wrapper__sidebar">
         <div class="bio">
           <h1 class="bio__title">Nik Uzair</h1>
           <h2 class="bio__subtitle">Principal Software Engineer at xaround</h2>
@@ -100,9 +100,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </aside>
 
-      <div class="content">
+      <main class="wrapper__content">
         <div>
           <ul role="list">
             <li>
@@ -153,7 +153,6 @@
                 class="project__archive"
                 ><p>View my Résumé <i class="fa-solid fa-arrow-right"></i></p>
               </a>
-              <br />
               <div class="project">
                 <h4>Typescript</h4>
                 <h2>dinerojs/dinero.js</h2>
@@ -227,7 +226,7 @@
           Quisque justo velit, fringilla non laoreet at, malesuada cursus arcu.
           Aenean eu luctus tortor. Donec facilisis molestie eleifend.
         </p>
-      </div>
+      </main>
     </section>
   </body>
   <script src="main.js" type="module"></script>

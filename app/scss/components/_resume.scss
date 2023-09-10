@@ -9,13 +9,16 @@
       color: var(--white-color-6);
     }
   }
-}
 
-.resume__job {
-  &-title {
-    font-weight: 400;
-    &:hover {
-      text-decoration: underline;
+  &__job {
+    &-title {
+      font-weight: 400;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-tech {
+      color: var(--white-color-6);
     }
   }
   &-tech {

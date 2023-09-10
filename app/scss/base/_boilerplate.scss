@@ -1,6 +1,6 @@
 // @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
-@use '../utilities';
+@use '../utilities' as u;
 
 html {
   box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.3;
-  font-family: utilities.$font;
+  font-family: u.$font;
   background-color: var(--black-color);
   --tw-bg-opacity: 1;
 }

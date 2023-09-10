@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/uzaircode-portfolio/assets/nik-favicon-d155483d.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style lang="sass">:root {
   --background-color: rgb(21 21 21);
   --primary-color-1: hsl(221, 83%, 61%);
@@ -193,8 +193,13 @@ span {
   backdrop-filter: blur(200px);
 }
 
+.bio__title {
+  font-weight: 600;
+}
+
 .bio__subtitle {
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .nav {
@@ -270,6 +275,18 @@ span {
 .project:hover {
   background-color: hsl(0, 0%, 10%);
   transform: scale(1.1);
+}
+
+@media (max-width: 62.5em) {
+  .project:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 62.5em) {
+  .list_project {
+    margin: 40px;
+  }
 }
 
 .resume {
@@ -431,6 +448,12 @@ span {
     display: block;
     margin: 40px;
   }
+  .wrapper__content, .wrapper__sidebar {
+    padding-top: initial;
+  }
+  .wrapper__content {
+    margin-top: 90px;
+  }
 }
 
 .design {
@@ -453,13 +476,13 @@ span {
 }
     </style>
     <title>Archive | uzaircode</title>
-    <script type="module" crossorigin src="/uzaircode-portfolio/assets/animation-1edcfe07.js"></script>
-    <link rel="stylesheet" href="/uzaircode-portfolio/assets/animation-3b3b3846.css">
+    <script type="module" crossorigin src="/uzaircode-portfolio/assets/animation-fff49b27.js"></script>
+    <link rel="stylesheet" href="/uzaircode-portfolio/assets/animation-c8a07e7e.css">
   </head>
   <body id="box">
     <!-- <div id="blur"></div>
     <div id="blob"></div> -->
-    <section class="container" style="padding-top: 2rem">
+    <section class="container list_project" style="padding-top: 2rem">
       <div>
         <!-- <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank"
           ><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i
@@ -533,6 +556,7 @@ span {
     integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
+    type="module"
   ></script>
   
   

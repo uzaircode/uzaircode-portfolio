@@ -1,10 +1,19 @@
-.sidebar {
+.wrapper__sidebar {
   display: flex;
   flex-direction: column;
   height: 90dvh;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 0;
+
+  @media (max-width: 1000px) {
+    display: block; /* You can reset the properties within this block */
+    flex-direction: initial;
+    height: initial;
+    position: initial;
+    top: initial;
+    padding: 40px;
+  }
 
   div:last-of-type {
     margin-top: auto;

@@ -62,6 +62,13 @@ body {
 .container {
   max-width: 75rem;
   margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 62.5em) {
+  .container {
+    padding: 0;
+  }
 }
 
 .flex {
@@ -245,11 +252,17 @@ span {
   color: white;
 }
 
+@media (max-width: 1000px) {
+  .nav {
+    display: none;
+  }
+}
+
 .project {
   background-color: rgb(18, 18, 18);
   transition: all 0.2s ease-in-out;
   padding: 2rem 3rem;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
   cursor: pointer;
 }
@@ -279,6 +292,10 @@ span {
 }
 
 .resume__job-tech {
+  color: var(--white-color-6);
+}
+
+.resume-tech {
   color: var(--white-color-6);
 }
 
@@ -373,7 +390,7 @@ span {
   grid-row-end: 20;
 }
 
-.sidebar {
+.wrapper__sidebar {
   display: flex;
   flex-direction: column;
   height: 90dvh;
@@ -382,7 +399,18 @@ span {
   top: 0;
 }
 
-.sidebar div:last-of-type {
+@media (max-width: 1000px) {
+  .wrapper__sidebar {
+    display: block; /* You can reset the properties within this block */
+    flex-direction: initial;
+    height: initial;
+    position: initial;
+    top: initial;
+    padding: 40px;
+  }
+}
+
+.wrapper__sidebar div:last-of-type {
   margin-top: auto;
 }
 
@@ -395,9 +423,15 @@ span {
   display: flex;
 }
 
-.content,
-.sidebar {
+.wrapper__content, .wrapper__sidebar {
   padding-top: 40px;
+}
+
+@media (max-width: 62.5em) {
+  .wrapper {
+    display: block;
+    margin: 40px;
+  }
 }
 
 .design {
@@ -420,8 +454,8 @@ span {
 }
     </style>
     <title>Archive | uzaircode</title>
-    <script type="module" crossorigin src="/uzaircode-portfolio/assets/animation-334c10ff.js"></script>
-    <link rel="stylesheet" href="/uzaircode-portfolio/assets/animation-471563ac.css">
+    <script type="module" crossorigin src="/uzaircode-portfolio/assets/animation-3dc3a7cc.js"></script>
+    <link rel="stylesheet" href="/uzaircode-portfolio/assets/animation-4c2a46f4.css">
   </head>
   <body id="box">
     <!-- <div id="blur"></div>

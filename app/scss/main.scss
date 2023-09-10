@@ -3,20 +3,6 @@
 @forward 'components';
 @forward 'layout';
 
-.wrapper {
-  display: flex;
-  align-items: start;
-  padding-bottom: 5rem;
-  gap: 5rem;
-  justify-content: space-between;
-  display: flex;
-}
-
-.content,
-.sidebar {
-  padding-top: 40px;
-}
-
 .design {
   margin-top: 3rem;
   font-size: 0.875rem;

@@ -3,6 +3,8 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(20, 5vw);
+  overflow: hidden;
+
   &__img {
     width: 100%;
     height: 100%;

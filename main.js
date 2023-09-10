@@ -1,5 +1,4 @@
 import './app/scss/main.scss';
-
 console.log('working');
 
 const blob = document.getElementById('blob');

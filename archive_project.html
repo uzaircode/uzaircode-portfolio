@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/nik-favicon-d155483d.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style lang="sass">:root {
+  --background-color: rgb(21 21 21);
+  --primary-color-1: hsl(221, 83%, 61%);
+  --primary-color-2: hsl(221, 83%, 53%);
+  --primary-color-3: hsl(221, 83%, 45%);
+  --secondary-color-1: hsl(220, 40%, 6%);
+  --secondary-color-2: rgb(21 21 21);
+  --secondary-color-3: hsl(220, 39%, 15%);
+  --white-color-1: hsl(210, 22%, 91%);
+  --white-color-2: hsl(210, 23%, 95%);
+  --white-color-3: hsl(0, 0%, 100%);
+  --white-color-4: hsl(0, 20%, 96%);
+  --white-color-5: hsl(223, 4%, 68%);
+  --white-color-6: hsl(0, 0%, 50%);
+  --black-color: rgb(0, 0, 0);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  background-color: var(--black-color);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+figure {
+  margin: 13px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Inter", sans-serif;
+  background-color: var(--black-color);
+  --tw-bg-opacity: 1;
+}
+
+::selection {
+  background: hsl(0, 0%, 25%);
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--white-color-4);
+}
+
+p {
+  margin-top: 0;
+  color: var(--white-color-5);
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-bottom: 2;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--white-color-4);
+}
+
+nav,
+section {
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.375rem;
+  color: #ffffff;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+* > ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+span {
+  font-size: 0.875rem;
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+#box {
+  position: relative;
+  contain: content;
+}
+
+#blob {
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
+  animation: rotate 20s infinite;
+  opacity: 0.2;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  backdrop-filter: blur(200px);
+}
+
+.bio__subtitle {
+  margin-bottom: 20px;
+}
+
+.nav {
+  margin-top: 2rem;
+}
+
+.nav__underline {
+  background-color: rgb(170 172 177/var(--tw-bg-opacity));
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  margin: 0 16px;
+  margin-bottom: 5px;
+  transition: width 0.15s ease;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav__link {
+  max-width: 100%;
+}
+
+.nav__link span {
+  color: hsl(223, 4%, 68%);
+}
+
+.nav__link:hover,
+.nav__link .active {
+  /* Apply the same styles for active state as hover state */
+  color: white;
+}
+
+.nav__link:hover .nav__underline,
+.nav__link .active .nav__underline {
+  width: 48px;
+}
+
+.nav__label {
+  letter-spacing: 4px;
+}
+
+.nav__link.active span {
+  color: white;
+}
+
+.nav__link.active .nav__underline {
+  color: white;
+}
+
+.project {
+  background-color: rgb(18, 18, 18);
+  transition: all 0.2s ease-in-out;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.project:hover {
+  background-color: hsl(0, 0%, 10%);
+  transform: scale(1.1);
+}
+
+.resume {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+  margin-inline: auto;
+}
+
+.resume__date p {
+  color: var(--white-color-6);
+}
+
+.resume__job-title {
+  font-weight: 400;
+}
+
+.resume__job-title:hover {
+  text-decoration: underline;
+}
+
+.resume__job-tech {
+  color: var(--white-color-6);
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social__test {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.social__test_1 {
+  align-items: center;
+}
+
+.social__avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.social__link {
+  margin-right: 3px;
+}
+
+.social__icon {
+  margin-bottom: 3px;
+  vertical-align: middle;
+  transform: scale(0.45);
+}
+
+.gallery {
+  margin: 2rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(20, 5vw);
+  overflow: hidden;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.gallery__item--1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 1;
+  grid-row-end: 7;
+}
+
+.gallery__item--2 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row: 1;
+  grid-row-end: 6;
+}
+
+.gallery__item--3 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 7;
+  grid-row-end: 13;
+}
+
+.gallery__item--4 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row: 6;
+  grid-row-end: 12;
+}
+
+.gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 13;
+  grid-row-end: 20;
+}
+
+.gallery__item--6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row: 12;
+  grid-row-end: 20;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 90dvh;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+}
+
+.sidebar div:last-of-type {
+  margin-top: auto;
+}
+
+.wrapper {
+  display: flex;
+  align-items: start;
+  padding-bottom: 5rem;
+  gap: 5rem;
+  justify-content: space-between;
+  display: flex;
+}
+
+.content,
+.sidebar {
+  padding-top: 40px;
+}
+
+.design {
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.project__archive i {
+  transition: all 0.15s ease;
+}
+
+.project__archive:hover p {
+  color: #ffffff;
+}
+
+.project__archive:hover i {
+  margin-left: 10px;
+}
+    </style>
+    <title>Archive | uzaircode</title>
+    <script type="module" crossorigin src="/assets/animation-334c10ff.js"></script>
+    <link rel="stylesheet" href="/assets/animation-471563ac.css">
+  </head>
+  <body id="box">
+    <!-- <div id="blur"></div>
+    <div id="blob"></div> -->
+    <section class="container" style="padding-top: 2rem">
+      <div>
+        <!-- <a href="https://www.linkedin.com/in/nikuzairsc/" target="_blank"
+          ><i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i
+        ></a> -->
+        <a href="/uzaircode-portfolio/">
+          <p><i class="fa-solid fa-arrow-left"></i> Nik Uzair</p>
+        </a>
+      </div>
+      <h1 class="text">Archive Projects</h1>
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <a href="#">
+            <img
+              src="/assets/project-example-90d8eb70.png"
+              class="gallery__img"
+              alt="Image 1"
+            />
+          </a>
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <a href="#">
+            <img
+              src="/assets/project-example2-4bed2f70.png"
+              class="gallery__img"
+              alt="Image 2"
+            />
+          </a>
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <a href="#">
+            <img
+              src="/assets/project-example3-201b4504.png"
+              class="gallery__img"
+              alt="Image 3"
+            />
+          </a>
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <a href="#">
+            <img
+              src="/assets/project-example4-1008474e.png"
+              class="gallery__img"
+              alt="Image 4"
+            />
+          </a>
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <a href="#">
+            <img
+              src="/assets/project-example5-f86ba43b.png"
+              class="gallery__img"
+              alt="Image 5"
+            />
+          </a>
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <a href="#">
+            <img
+              src="/assets/project-example6-1b7645fe.png"
+              class="gallery__img"
+              alt="Image 6"
+            />
+          </a>
+        </figure>
+      </div>
+    </section>
+  </body>
+  <script></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  
+  
+  <script
+    src="https://kit.fontawesome.com/f9b89f9f6c.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
